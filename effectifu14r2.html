@@ -1,0 +1,991 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>J3s - amilly football</title>
+<link rel="icon" href="img/amilly.png">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/themify-icons.css">
+<link rel="stylesheet" href="css/flaticon.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="stylesheet" href="css/nice-select.css">
+<link rel="stylesheet" href="css/slick.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/logo.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/voyelle.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+
+.carousel-item {
+min-width: 130px;
+height: 130px;
+box-sizing: border-box;
+text-align: center;
+background-color: #fff;
+margin-right: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 10px;
+}
+.carousel-item img {
+max-width: 100%;
+max-height: 100%;
+object-fit: cover;
+}
+.carousel-sectionn {
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #ffffff;
+padding: 20px;
+width: 100%;
+}
+.carousel-containerr {
+    width: calc(130px * 5 + 40px * 4);
+    overflow: hidden;
+    position: relative;
+}
+
+.carousell {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel-container {
+max-width: 600px;
+margin: 10px auto;
+height: 300px;
+border-radius: 20px;
+overflow: hidden;
+margin-bottom: 50px;
+box-shadow: 0.1px 0.1px 1px 3px #999;
+}
+
+.carousel-inner {
+height: 100%;
+}
+.carousel-inner > .item > img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.carousel-control {
+width: 5%;
+}
+.access-links {
+text-align: center;
+margin-top: 30px;
+}
+.access-links .col-md-3 {
+position: relative;
+margin-bottom: 20px;
+}
+.access-links img {
+max-width: 100%;
+height: auto;
+border-radius: 10px;
+}
+.access-links .overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+color: black; /* Changement de la couleur du texte en noir */
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border-radius: 10px;
+}
+.access-links .col-md-3:hover .overlay {
+opacity: 1;
+box-shadow: 0.5px 0.5px 5px 5px rgba(0, 0, 0, 0.658);
+background-color: #b5f1bc;
+}
+.overlay i {
+font-size: 30px;
+margin-top: 17px;
+}
+.overlay p {
+margin: 0;
+font-size: 18px;
+margin-bottom: 10px;
+}
+.navbar-nav .nav-link {
+font-weight: bold;
+}
+.title-acces h2 {
+  text-align: center; /* Centrer le texte */
+            margin-top: 20px; /* Espacement du haut */
+}
+.title-actualites {
+  text-align: center;
+            margin-top: 20px; /* Espacement du haut */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    body{
+      line-height: 1.5;
+      font-family: 'Poppins', sans-serif;
+    }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container{
+      max-width: 1170px;
+      margin: auto;
+    }
+    /* Media query pour les écrans de taille moyenne */
+@media (max-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Media query pour les petits écrans */
+@media (max-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+/* Exemple de Media Queries pour ajuster la largeur de la section Actualités */
+@media (max-width: 768px) {
+  .title-actualites h2 {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+}
+
+/* Exemple de Media Queries pour ajuster la largeur des rectangles dans la section Accès direct */
+@media (max-width: 768px) {
+  .rectangle {
+    height: 120px;
+  }
+}
+    .row{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    ul{
+      list-style: none;
+    }
+    .footer{
+      background-color: #24262b;
+      padding: 70px 0;
+    }
+    .footer-col{
+      width: 25%;
+      padding: 0 15px;
+    }
+    .footer-col h4{
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
+    }
+    .footer-col h4::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      background-color: #b5f1bc;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+    }
+    .footer-col ul li:not(:last-child){
+      margin-bottom: 10px;
+    }
+    .footer-col ul li a{
+      font-size: 16px;
+      text-transform: capitalize;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 300;
+      color: #bbbbbb;
+      display: block;
+      transition: all 0.3s ease;
+    }
+    .footer-col ul li a:hover{
+      color: #ffffff;
+      padding-left: 8px;
+    }
+    .footer-col .social-links a{
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin: 0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: #ffffff;
+      transition: all 0.5s ease;
+    }
+    .footer-col .social-links a:hover{
+      color: 24262b;
+      background-color: #ffffff;
+    }
+    @media(max-width: 767px){
+      .footer-col{
+        width:100%;
+      }
+    }
+    .homee_menuu {
+  position: absolute;
+  left: 0;
+  top: 1000;
+  width: 100%;
+  z-index: 999;
+}
+.ligne {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    .trait {
+        flex: 1;
+        border-bottom: 1px solid #8de584;
+    }
+    .mot {
+        padding: 0 10px;
+        font-size: 2rem;
+    }
+    .titre {
+        font-size: 2rem;
+        position: relative;
+        text-align: center;
+    }
+    .titre::after {
+        content: '';
+        display: block;
+        width: 44px; /* Ajustez cette valeur pour correspondre à la longueur souhaitée */
+        height: 3px;
+        background-color: #8de584;
+        position: absolute;
+        bottom: -8px; /* Ajustez la distance entre le texte et le trait */
+        left: 502px;
+    }
+    .titreactu {
+        font-size: 2rem;
+        position: relative;
+        text-align: center;
+    }
+    .titreactu::after {
+        content: '';
+        display: block;
+        width: 44px; /* Ajustez cette valeur pour correspondre à la longueur souhaitée */
+        height: 3px;
+        background-color: #8de584;
+        position: absolute;
+        bottom: -8px; /* Ajustez la distance entre le texte et le trait */
+        left: 902px;
+    }
+    .rectangle {
+        background-color: #8de584; /* Couleur de fond des rectangles */
+        height: 150px; /* Hauteur des rectangles (à adapter selon vos besoins) */
+        border-radius: 20px; /* Coins arrondis */
+        display: flex;
+        flex-direction: column; /* Pour aligner le titre en haut et l'icône en bas */
+        align-items: center;
+        justify-content: space-between; /* Espacement équitable entre le titre et l'icône */
+        padding: 26px; /* Espace à l'intérieur du rectangle */
+        color: #000000; /* Couleur du texte */
+        font-weight: bold;
+        text-align: center;
+        transition: transform 0.3s ease;
+        position: relative; /* Pour positionner le titre et l'icône */
+    }
+    .rectangle:hover {
+        transform: scale(1.05); /* Effet de zoom au survol */
+        box-shadow: 0.5px 0.5px 5px 5px rgba(0, 0, 0, 0.658);
+    }
+    .rectangle i {
+        font-size: 30px; /* Taille de l'icône */
+    }
+    .rectangle h3 {
+        font-size: 18px; /* Taille du titre */
+    }
+
+    .custom-section {
+    margin-top: 100px; /* Espacement du haut, ajustez selon vos besoins */
+    display: flex;
+    justify-content: center; /* Centrage horizontal des colonnes */
+}
+
+/* Styles pour chaque colonne */
+.custom-column {
+    margin: 0 15px; /* Espacement horizontal entre les colonnes */
+}
+
+/* Styles pour le rectangle */
+.rectangle {
+    position: relative;
+    background-color: #8de584;
+    padding: 200px;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    min-height: 200px; /* Hauteur minimale du rectangle, ajustez selon le contenu */
+}
+
+/* Styles pour le titre dans le rectangle */
+.rectangle h3 {
+    font-size: 20px;
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+}
+
+/* Styles pour l'icône dans le rectangle */
+.rectangle i {
+    position: absolute;
+    top: 290px; /* Déplace l'icône vers le haut */
+    left: 35px;
+    font-size: 3rem; /* Taille de l'icône */
+    color: #333;
+}
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.dropdown-menu .dropdown-item {
+    color: #000; /* Couleur du texte */
+    background-color: transparent; /* Couleur de fond par défaut */
+    transition: background-color 0.3s, color 0.3s; /* Transition douce pour les changements de couleur */
+}
+.player-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    width: 90%;
+}
+
+.player-card:hover {
+    transform: translateY(-10px);
+}
+
+.player-photo {
+    width: 100%;
+    height: auto;
+}
+
+.player-info {
+    padding: 15px;
+}
+
+.player-info h4 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+}
+
+.player-info p {
+    margin: 0;
+    color: #777;
+}
+</style>
+</head>
+<body>
+<div class="preloader">
+        <div class="loader">
+            <div class="loader-outter"></div>
+            <div class="loader-inner"></div>
+            <div class="indicator"> 
+                <svg width="16px" height="12px">
+                    <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <script>
+    setTimeout(function() {
+    var preloader = document.querySelector('.preloader');
+    preloader.style.display = 'none';
+}, 750);
+
+</script>
+<header class="main_menu">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                  <a class="navbar-brand" href="#"> <img src="" alt=""> </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+  
+                    <div class="collapse navbar-collapse main-menu-item justify-content-end"
+                        id="navbarSupportedContent">
+                        <ul class="navbar-nav align-items-center">
+                          <li class="nav-item">
+                              <a class="nav-link" href="ACCEUIL.html">Acceuil</a>
+                          </li>
+                          <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="tarifs.html" id="navbarDropdown_2"
+                                  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Club
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
+                                  <a class="dropdown-item" href="histoire.html">Histoire du Club</a>
+                                  <a class="dropdown-item" href="organisation.html">Organigramme</a>
+                                  <a class="dropdown-item" href="installations.html">Installations</a>
+                                  <a class="dropdown-item" href="documents.html">Documents</a>
+                              </div>
+                          </li>
+                          <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="equipes.html" id="navbarDropdown_5"
+                                  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Equipes
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdown_5">
+                                <a class="dropdown-item" href="groupe_senior.html">Seniors</a>
+                                <a class="dropdown-item" href="groupe_formation.html">Foot à 11</a>
+                                <a class="dropdown-item" href="groupe_preformation.html">Foot à 8</a>
+                                <a class="dropdown-item" href="ecole_de_football.html">Foot à 5</a>
+                                <a class="dropdown-item" href="pole_feminin.html">Pôle Féminin</a>
+                              </div>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="actualités.html">Actualités</a>
+                        </li>
+    
+                          <a class="navbar-brand" href="acceuil1.html"> 
+                              <img src="img/amilly.png" alt="logo">
+                          </a>
+    
+                          <li class="nav-item">
+                            <a class="nav-link" href="https://clubshop.macron.com/auxerre/j3s-amilly">Boutique</a>
+                        </li>
+    
+                          <li class="nav-item">
+                              <a class="nav-link" href="Partenaires.html">Partenaires</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="media.html">Médias</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="contact.html">Contact</a>
+                          </li>
+                      </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+
+<br><br><br><br>
+
+<section>
+    <div class="back-vod" style="height: 300px;">
+        <video id="background-video" style="display: block; object-fit: cover;" autoplay="autoplay" loop="loop" muted="" width="100%" height="480px"> <source src="img/monaco.mp4" type="video/mp4"> Your browser does not support the video tag. </video>
+                        </div>
+</section>
+
+<div class="container">
+  <div class="row">
+</div>
+
+<br><br><br><br><br><br><br><br><br>
+<!----------------- CONTENUE ----------------->
+
+<div class="container">
+    <h2 class="section-title">EFFECTIF U14 REGIONAL 2</h2>
+    <br><br><br>
+    <div class="row">
+        <!-- Boucle pour générer 30 joueurs -->
+        <!-- Utilisez des boucles en backend pour générer ces éléments dans un projet réel -->
+        <div class="col-md-4 col-sm-6 mb-4" id="player1">
+            <div class="player-card">
+                <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+                <div class="player-info">
+                    <h4>Valentin Liénard</h4>
+                    <p>Défenseur</p>
+                </div>
+            </div>
+        </div>
+        <!-- Répétez pour les autres joueurs, changez les ids et les images -->
+        <!-- Ici, nous allons générer des blocs en utilisant un exemple de 30 joueurs -->
+        <!-- Exemples supplémentaires -->
+        <div class="col-md-4 col-sm-6 mb-4" id="player2">
+            <div class="player-card">
+              <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+              <div class="player-info">
+                  <h4>Valentin Liénard</h4>
+                  <p>Défenseur</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4" id="player3">
+            <div class="player-card">
+              <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+              <div class="player-info">
+                  <h4>Valentin Liénard</h4>
+                  <p>Défenseur</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4" id="player3">
+          <div class="player-card">
+            <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+            <div class="player-info">
+                <h4>Valentin Liénard</h4>
+                <p>Défenseur</p>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-4" id="player3">
+        <div class="player-card">
+          <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+          <div class="player-info">
+              <h4>Valentin Liénard</h4>
+              <p>Défenseur</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6 mb-4" id="player3">
+      <div class="player-card">
+        <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+        <div class="player-info">
+            <h4>Valentin Liénard</h4>
+            <p>Défenseur</p>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-4 col-sm-6 mb-4" id="player3">
+    <div class="player-card">
+      <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+      <div class="player-info">
+          <h4>Valentin Liénard</h4>
+          <p>Défenseur</p>
+        </div>
+    </div>
+</div>
+<div class="col-md-4 col-sm-6 mb-4" id="player3">
+  <div class="player-card">
+    <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+    <div class="player-info">
+        <h4>Valentin Liénard</h4>
+        <p>Défenseur</p>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 mb-4" id="player3">
+  <div class="player-card">
+    <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+    <div class="player-info">
+        <h4>Valentin Liénard</h4>
+        <p>Défenseur</p>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 mb-4" id="player3">
+  <div class="player-card">
+    <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+    <div class="player-info">
+        <h4>Valentin Liénard</h4>
+        <p>Défenseur</p>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 mb-4" id="player3">
+  <div class="player-card">
+    <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+    <div class="player-info">
+        <h4>Valentin Liénard</h4>
+        <p>Défenseur</p>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 mb-4" id="player3">
+  <div class="player-card">
+    <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+    <div class="player-info">
+        <h4>Valentin Liénard</h4>
+        <p>Défenseur</p>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 mb-4" id="player3">
+  <div class="player-card">
+    <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+    <div class="player-info">
+        <h4>Valentin Liénard</h4>
+        <p>Défenseur</p>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 mb-4" id="player3">
+  <div class="player-card">
+    <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+    <div class="player-info">
+        <h4>Valentin Liénard</h4>
+        <p>Défenseur</p>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 mb-4" id="player3">
+  <div class="player-card">
+    <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+    <div class="player-info">
+        <h4>Valentin Liénard</h4>
+        <p>Défenseur</p>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 mb-4" id="player3">
+  <div class="player-card">
+    <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+    <div class="player-info">
+        <h4>Valentin Liénard</h4>
+        <p>Défenseur</p>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 mb-4" id="player3">
+  <div class="player-card">
+    <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+    <div class="player-info">
+        <h4>Valentin Liénard</h4>
+        <p>Défenseur</p>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 mb-4" id="player3">
+  <div class="player-card">
+    <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+    <div class="player-info">
+        <h4>Valentin Liénard</h4>
+        <p>Défenseur</p>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 mb-4" id="player3">
+  <div class="player-card">
+    <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+    <div class="player-info">
+        <h4>Valentin Liénard</h4>
+        <p>Défenseur</p>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 mb-4" id="player3">
+  <div class="player-card">
+    <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+    <div class="player-info">
+        <h4>Valentin Liénard</h4>
+        <p>Défenseur</p>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 mb-4" id="player3">
+  <div class="player-card">
+    <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+    <div class="player-info">
+        <h4>Valentin Liénard</h4>
+        <p>Défenseur</p>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 mb-4" id="player3">
+  <div class="player-card">
+    <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+    <div class="player-info">
+        <h4>Valentin Liénard</h4>
+        <p>Défenseur</p>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 mb-4" id="player3">
+  <div class="player-card">
+    <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+    <div class="player-info">
+        <h4>Valentin Liénard</h4>
+        <p>Défenseur</p>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 mb-4" id="player3">
+  <div class="player-card">
+    <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+    <div class="player-info">
+        <h4>Valentin Liénard</h4>
+        <p>Défenseur</p>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 mb-4" id="player3">
+  <div class="player-card">
+    <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+    <div class="player-info">
+        <h4>Valentin Liénard</h4>
+        <p>Défenseur</p>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 mb-4" id="player3">
+  <div class="player-card">
+    <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+    <div class="player-info">
+        <h4>Valentin Liénard</h4>
+        <p>Défenseur</p>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 mb-4" id="player3">
+  <div class="player-card">
+    <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+    <div class="player-info">
+        <h4>Valentin Liénard</h4>
+        <p>Défenseur</p>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 mb-4" id="player3">
+  <div class="player-card">
+    <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+    <div class="player-info">
+        <h4>Valentin Liénard</h4>
+        <p>Défenseur</p>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 mb-4" id="player3">
+  <div class="player-card">
+    <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+    <div class="player-info">
+        <h4>Valentin Liénard</h4>
+        <p>Défenseur</p>
+      </div>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 mb-4" id="player3">
+  <div class="player-card">
+    <img src="img/valentin-lienard.png" class="player-photo" alt="Player 1">
+    <div class="player-info">
+        <h4>Valentin Liénard</h4>
+        <p>Défenseur</p>
+      </div>
+  </div>
+</div>
+
+
+    </div>
+</div>
+
+<br><br><br><br><br><br><br><br>
+<!-----------------  END CONTENUE ----------------->
+<div class="ligne">
+    <div class="trait"></div>
+    <div class="mot"><strong>Nos partenaires</strong></div>
+    <div class="trait"></div>
+</div>
+  <br><br>
+  <section>
+    <div class="carousel-sectionn">
+        <div class="carousel-containerr">
+            <div class="carousell">
+                <div class="carousel-item">
+                    <a href="https://www.mcdonalds.fr/restaurants/mcdonalds-amilly/855" target="_blank">
+                        <img src="img/mcdo.jpg" alt="mcdo">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.rdventerreanimale.fr/" target="_blank">
+                        <img src="img/terre-animal.png" alt="terre animal">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.tendron.com/" target="_blank">
+                        <img src="img/my-tendron.jpg" alt="my tendron">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.boulangerie-ange.fr/" target="_blank">
+                        <img src="img/ange-boulangerie.png" alt="ange boulangerie">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="">
+                        <img src="img/f'amilly-food.jpg" alt="f'amilly food">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.la-boucherie.fr/restaurant-viande/amilly/" target="_blank">
+                        <img src="img/la-boucherie.jpg" alt="la boucherie">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="">
+                        <img src="img/pro-à-pro.jpg" alt="pro-à-pro">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="">
+                        <img src="img/intermarché.jpg" alt="intermarché">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.groupe-jrichard.fr/" target="_blank">
+                        <img src="img/sauvegrain.jpg" alt="sauvegrain">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.selectpizza45.fr/" target="_blank">
+                        <img src="img/select-pizza.png" alt="select pizza">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.e.leclerc/mag/e-leclerc-montargis" target="_blank">
+                        <img src="img/e.leclerc.jpg" alt="e.leclerc">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.parebrise-france.com/montargis/" target="_blank">
+                        <img src="img/france-glass.jpg" alt="france glass">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="">
+                        <img src="img/lt-vitrage-auto.jpg" alt="lt-vitrage-auto">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://agence.lamaisondesobseques.fr/11-pompes-funebres-ets-rondeau-la-maison-des-obseques" target="_blank">
+                        <img src="img/la-maison-des-obsèques.png" alt="la maison des obsèques">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.plusdebieres.fr/" target="_blank">
+                        <img src="img/plus-de-bières.jpg" alt="plus de bières">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://fr.restaurantguru.com/Le-Bergerac-Amilly" target="_blank">
+                        <img src="img/bergerac.jpg" alt="bergerac">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+      <script>
+          document.addEventListener('DOMContentLoaded', () => {
+              const carousel = document.querySelector('.carousell');
+              const items = document.querySelectorAll('.carousel-item');
+              const itemWidth = items[0].offsetWidth + parseInt(getComputedStyle(items[0]).marginRight);
+              let currentIndex = 0;
+              let direction = 1;
+  
+              function startCarousel() {
+                  setInterval(() => {
+                      currentIndex += direction;
+  
+                      if (currentIndex >= items.length - 5) {
+                          direction = -1;
+                          currentIndex = items.length - 5;
+                      } else if (currentIndex <= 0) {
+                          direction = 1;
+                          currentIndex = 0;
+                      }
+  
+                      carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+                  }, 2000);
+              }
+  
+              startCarousel();
+          });
+      </script>
+  </section>
+
+  <footer class="homee_menuu">
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>navigation</h4>
+            <ul>
+              <li><a href="#">Acceuil</a></li>
+              <li><a href="#">Club</a></li>
+              <li><a href="equipes.html">Equipes</a></li>
+              <li><a href="#">Actualités</a></li>
+              <li><a href="#">Boutique</a></li>
+              <li><a href="#">Partenaires</a></li>
+              <li><a href="#">Médias</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Infos partiques</h4>
+            <ul>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Mentions légales</a></li>
+              <li><a href="#">Politique de confidentialité</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Nous contactez</h4>
+            <ul>
+              <li><a href="#">STADE GEORGES CLÉRICEAU
+                rue de la fontaine 45200 Amilly
+              </a></li>
+              <li><a href="#">exemple@Amilly-foot.fr</a></li>
+              <li><a href="#">Secrétariat : 06 11 16 62 09</a></li>
+              <li><a href="#">Horaires</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>suivez-nous</h4>
+            <div class="social-links">
+              <a href="https://www.facebook.com/p/J3-Foot-Amilly-100086405965551/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery-1.12.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.magnific-popup.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/masonry.pkgd.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.nice-select.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/jquery.counterup.min.js"></script>
+  <script src="js/waypoints.min.js"></script>
+  <script src="js/jquery.ajaxchimp.min.js"></script>
+  <script src="js/jquery.form.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/mail-script.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+</html>

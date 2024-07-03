@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Déposez votre CV et Lettre de Motivation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .contact-section {
+            background-color: #fff;
+            padding: 30px;
+            max-width: 600px;
+            margin: 50px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .container h1 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="file"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .form-group textarea {
+            height: 150px;
+        }
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <section class="contact-section">
+        <div class="container">
+            <h1>Déposez votre CV et Lettre de Motivation</h1>
+            <form id="contact-form" method="post"  enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="name">Nom:</label>
+                    <input type="text" id="name" name="name" >
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" >
+                </div>
+                <div class="form-group">
+                    <label for="subject">Objet:</label>
+                    <input type="text" id="subject" name="subject" >
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" ></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="cv">CV:</label>
+                    <input type="file" id="cv" name="cv" accept=".pdf, .doc, .docx" >
+                </div>
+                <div class="form-group">
+                    <label for="cover-letter">Lettre de Motivation:</label>
+                    <input type="file" id="cover-letter" name="cover_letter" accept=".pdf, .doc, .docx" >
+                </div>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
+
