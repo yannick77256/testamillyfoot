@@ -507,8 +507,8 @@ font-weight: bold;
     <div class="trait"></div>
 </div>
   <br><br>
-  <section>
-     <div class="carousel-sectionn">
+ <section>
+      <div class="carousel-sectionn">
           <div class="carousel-containerr">
               <div class="carousell">
                   <div class="carousel-item237">
@@ -594,35 +594,35 @@ font-weight: bold;
               </div>
           </div>
       </div>
-  
-      <script>
-          document.addEventListener('DOMContentLoaded', () => {
-              const carousel = document.querySelector('.carousell');
-              const items = document.querySelectorAll('.carousel-item');
-              const itemWidth = items[0].offsetWidth + parseInt(getComputedStyle(items[0]).marginRight);
-              let currentIndex = 0;
-              let direction = 1;
-  
-              function startCarousel() {
-                  setInterval(() => {
-                      currentIndex += direction;
-  
-                      if (currentIndex >= items.length - 5) {
-                          direction = -1;
-                          currentIndex = items.length - 5;
-                      } else if (currentIndex <= 0) {
-                          direction = 1;
-                          currentIndex = 0;
-                      }
-  
-                      carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-                  }, 2000);
-              }
-  
-              startCarousel();
-          });
-      </script>
-  </section>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const carousel = document.querySelector('.carousell');
+                const items = document.querySelectorAll('.carousel-item237');
+                const itemWidth = items[0].offsetWidth + parseInt(getComputedStyle(items[0]).marginRight);
+                let currentIndex = 0;
+                let direction = 1;
+    
+                function startCarousel() {
+                    setInterval(() => {
+                        currentIndex += direction;
+    
+                        if (currentIndex >= items.length - 5) {
+                            direction = -1;
+                            currentIndex = items.length - 5;
+                        } else if (currentIndex <= 0) {
+                            direction = 1;
+                            currentIndex = 0;
+                        }
+    
+                        carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+                    }, 2000);
+                }
+    
+                startCarousel();
+            });
+        </script>
+    </section>
 
   <footer class="homee_menuu">
 
