@@ -568,20 +568,26 @@ font-weight: bold;
 document.addEventListener('DOMContentLoaded', function () {
     var menuToggle = document.querySelector('.navbar-toggler');
     var customNav = document.querySelector('.custom-nav');
+    
+    console.log('menuToggle:', menuToggle); // Ajoutez ce log
+    console.log('customNav:', customNav);   // Ajoutez ce log
 
-    menuToggle.addEventListener('click', function () {
-        menuToggle.classList.toggle('active');
-        customNav.classList.toggle('show');
-    });
+    if (menuToggle && customNav) {
+        menuToggle.addEventListener('click', function () {
+            menuToggle.classList.toggle('active');
+            customNav.classList.toggle('show');
+        });
 
-    // Fermer le menu lorsque l'on clique en dehors de celui-ci
-    document.addEventListener('click', function (event) {
-        var clickover = event.target;
-        if (!customNav.contains(clickover) && !menuToggle.contains(clickover) && customNav.classList.contains('show')) {
-            customNav.classList.remove('show');
-            menuToggle.classList.remove('active');
-        }
-    });
+        document.addEventListener('click', function (event) {
+            var clickover = event.target;
+            if (!customNav.contains(clickover) && !menuToggle.contains(clickover) && customNav.classList.contains('show')) {
+                customNav.classList.remove('show');
+                menuToggle.classList.remove('active');
+            }
+        });
+    } else {
+        console.error('Éléments non trouvés : .navbar-toggler ou .custom-nav');
+    }
 });
 
     </script>
